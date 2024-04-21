@@ -84,9 +84,7 @@ services:
         container_name: maintainerr
         user: 1000:1000
         volumes:
-          - type: bind
-            source: ./data
-            target: /opt/data
+          - ./data:/opt/data
         environment:
           - TZ=Europe/Brussels
 #      - DEBUG=true # uncomment to enable debug logs
